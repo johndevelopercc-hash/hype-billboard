@@ -1,0 +1,26 @@
+{
+  "app": {
+    "title": "Hype Billboard",
+    "subtitle": "The most buzzed-about videos of the week"
+  },
+  "controls": {
+    "sortLabel": "Sort by",
+    "sortHype": "Highest Hype",
+    "sortDate": "Most recent",
+    "limitLabel": "Show",
+    "limitAll": "All",
+    "themeDark": "Dark mode",
+    "themeLight": "Light mode"
+  },
+  "card": {
+    "hypeLevel": "Hype Level",
+    "crownBadge": "Crown Jewel",
+    "by": "by"
+  },
+  "states": {
+    "loading": "Loading the billboard...",
+    "error": "Failed to load videos",
+    "errorRetry": "Retry",
+    "empty": "No videos available"
+  }
+}

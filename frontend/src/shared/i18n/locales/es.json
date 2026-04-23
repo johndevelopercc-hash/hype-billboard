@@ -1,0 +1,26 @@
+{
+  "app": {
+    "title": "Cartelera de Hype",
+    "subtitle": "Los videos con más ruido de la semana"
+  },
+  "controls": {
+    "sortLabel": "Ordenar por",
+    "sortHype": "Mayor Hype",
+    "sortDate": "Más recientes",
+    "limitLabel": "Mostrar",
+    "limitAll": "Todos",
+    "themeDark": "Modo oscuro",
+    "themeLight": "Modo claro"
+  },
+  "card": {
+    "hypeLevel": "Nivel de Hype",
+    "crownBadge": "Joya de la Corona",
+    "by": "por"
+  },
+  "states": {
+    "loading": "Cargando la cartelera...",
+    "error": "Error al cargar los videos",
+    "errorRetry": "Reintentar",
+    "empty": "No hay videos disponibles"
+  }
+}

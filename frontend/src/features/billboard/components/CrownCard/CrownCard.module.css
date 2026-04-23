@@ -1,0 +1,187 @@
+@keyframes crownReveal {
+  from {
+    opacity: 0;
+    transform: scale(0.97) translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.crown {
+  position: relative;
+  grid-column: 1 / -1;
+  border-radius: var(--radius-xl);
+  padding: 2px;
+  background: linear-gradient(135deg,
+    var(--color-crown-primary),
+    var(--color-crown-secondary),
+    var(--color-accent),
+    #06b6d4);
+  background-size: 300% 300%;
+  animation:
+    crownReveal 0.65s cubic-bezier(0.34, 1.56, 0.64, 1) both,
+    gradientShift 4s ease 0.65s infinite;
+  box-shadow: var(--crown-shadow);
+  transition: box-shadow 0.25s ease;
+}
+
+@keyframes gradientShift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.badge {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(135deg, var(--color-crown-primary), var(--color-crown-secondary));
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 16px;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.35);
+  z-index: 2;
+}
+
+.crownIcon {
+  font-size: 1rem;
+}
+
+.inner {
+  background: var(--color-card-bg);
+  border-radius: 14px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  overflow: hidden;
+  min-height: 260px;
+  transition: background 0.25s ease;
+}
+
+@media (max-width: 640px) {
+  .inner { grid-template-columns: 1fr; }
+}
+
+.thumbnailWrapper {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate; /* contains z-index children — prevents them from painting over .content */
+}
+
+.thumbnail {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+  z-index: 1;
+  color: transparent; /* hides alt text while the image is fetching */
+}
+
+.crown:hover .thumbnail {
+  transform: scale(1.06);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, transparent 60%, var(--color-card-bg) 95%);
+  transition: background 0.25s ease;
+  z-index: 2;
+}
+
+.imgFallback {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg,
+    rgba(245, 158, 11, 0.1),
+    rgba(236, 72, 153, 0.07));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 0;
+}
+
+.thumbnailHidden {
+  display: none;
+}
+
+.imgFallback span {
+  font-size: 5rem;
+  font-weight: 900;
+  color: var(--color-crown-primary);
+  opacity: 0.2;
+  text-transform: uppercase;
+  user-select: none;
+}
+
+.content {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.6rem;
+  position: relative;
+  z-index: 1; /* always above thumbnailWrapper stacking context */
+}
+
+.title {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: var(--color-text-primary);
+  line-height: 1.25;
+  margin: 0;
+}
+
+.author {
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+.author span {
+  color: var(--color-crown-primary);
+  font-weight: 600;
+}
+
+.date {
+  font-size: 0.8rem;
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+.hypeDisplay {
+  margin-top: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.hypeLabel {
+  font-size: 0.7rem;
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.hypeValue {
+  font-size: 2.2rem;
+  font-weight: 900;
+  background: linear-gradient(135deg, var(--color-crown-primary), var(--color-crown-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+}

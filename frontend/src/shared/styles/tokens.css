@@ -1,0 +1,111 @@
+/* ─────────────────────────────────────────────
+   DESIGN TOKENS — Hype Billboard
+   All CSS custom properties are defined here.
+   Components must consume these, never raw values.
+───────────────────────────────────────────── */
+
+/* ── Dark theme (default) ──────────────────── */
+:root,
+[data-theme="dark"] {
+  /* Backgrounds */
+  --color-bg:           #0a0c14;
+  --color-header-bg:    rgba(10, 12, 20, 0.85);
+  --color-card-bg:      rgba(15, 17, 26, 0.95);
+  --color-surface:      rgba(255, 255, 255, 0.04);
+  --color-surface-hover:rgba(255, 255, 255, 0.07);
+
+  /* Borders */
+  --color-border:       rgba(255, 255, 255, 0.08);
+  --color-border-hover: rgba(99, 102, 241, 0.4);
+
+  /* Text */
+  --color-text-primary:   #e2e8f0;
+  --color-text-secondary: #94a3b8;
+  --color-text-muted:     #64748b;
+
+  /* Accent (indigo) */
+  --color-accent:         #6366f1;
+  --color-accent-light:   #a5b4fc;
+  --color-accent-surface: rgba(99, 102, 241, 0.12);
+  --color-accent-border:  rgba(99, 102, 241, 0.2);
+
+  /* Crown */
+  --color-crown-primary:  #f59e0b;
+  --color-crown-secondary:#ec4899;
+  --crown-shadow: 0 0 40px rgba(245, 158, 11, 0.3),
+                  0 0 80px rgba(99, 102, 241, 0.2);
+
+  /* States */
+  --color-error:          #f87171;
+  --color-error-surface:  rgba(239, 68, 68, 0.15);
+  --color-error-border:   rgba(239, 68, 68, 0.3);
+
+  /* Skeleton */
+  --color-skeleton-base:  rgba(255, 255, 255, 0.04);
+  --color-skeleton-shine: rgba(255, 255, 255, 0.09);
+  --color-skeleton-accent-base:  rgba(99, 102, 241, 0.06);
+  --color-skeleton-accent-shine: rgba(99, 102, 241, 0.12);
+  --color-skeleton-crown-base:   rgba(245, 158, 11, 0.08);
+  --color-skeleton-crown-shine:  rgba(245, 158, 11, 0.16);
+
+  /* Controls */
+  --color-control-bg:     rgba(255, 255, 255, 0.05);
+  --color-control-border: rgba(255, 255, 255, 0.1);
+  --color-control-text:   #e2e8f0;
+
+  /* Radius */
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-full: 9999px;
+}
+
+/* ── Light theme ───────────────────────────── */
+[data-theme="light"] {
+  /* Backgrounds */
+  --color-bg:           #f1f5f9;
+  --color-header-bg:    rgba(241, 245, 249, 0.9);
+  --color-card-bg:      rgba(255, 255, 255, 0.98);
+  --color-surface:      rgba(255, 255, 255, 0.85);
+  --color-surface-hover:rgba(255, 255, 255, 1);
+
+  /* Borders */
+  --color-border:       rgba(0, 0, 0, 0.08);
+  --color-border-hover: rgba(99, 102, 241, 0.45);
+
+  /* Text */
+  --color-text-primary:   #0f172a;
+  --color-text-secondary: #475569;
+  --color-text-muted:     #94a3b8;
+
+  /* Accent */
+  --color-accent:         #4f46e5;
+  --color-accent-light:   #6366f1;
+  --color-accent-surface: rgba(99, 102, 241, 0.08);
+  --color-accent-border:  rgba(99, 102, 241, 0.2);
+
+  /* Crown */
+  --color-crown-primary:  #d97706;
+  --color-crown-secondary:#db2777;
+  --crown-shadow: 0 0 40px rgba(217, 119, 6, 0.2),
+                  0 0 80px rgba(79, 70, 229, 0.12);
+
+  /* States */
+  --color-error:          #dc2626;
+  --color-error-surface:  rgba(239, 68, 68, 0.08);
+  --color-error-border:   rgba(239, 68, 68, 0.2);
+
+  /* Skeleton */
+  --color-skeleton-base:  rgba(0, 0, 0, 0.05);
+  --color-skeleton-shine: rgba(0, 0, 0, 0.09);
+  --color-skeleton-accent-base:  rgba(99, 102, 241, 0.05);
+  --color-skeleton-accent-shine: rgba(99, 102, 241, 0.1);
+  --color-skeleton-crown-base:   rgba(217, 119, 6, 0.07);
+  --color-skeleton-crown-shine:  rgba(217, 119, 6, 0.13);
+
+  /* Controls */
+  --color-control-bg:     rgba(0, 0, 0, 0.04);
+  --color-control-border: rgba(0, 0, 0, 0.1);
+  --color-control-text:   #0f172a;
+}
