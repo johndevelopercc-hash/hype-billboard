@@ -1,5 +1,8 @@
 # Hype Billboard
 
+> [!NOTE]
+> Prefer to read this in English? [View English README](README.md)
+
 > Una cartelera de videos tecnológicos que filtra el ruido. El backend actúa como un colador inteligente sobre datos crudos de YouTube — calcula un **Nivel de Hype** para cada video y destaca la **Joya de la Corona** (el de mayor hype) en la interfaz.
 
 ![Vista previa de Hype Billboard](.github/preview.png)

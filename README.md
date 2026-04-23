@@ -1,5 +1,8 @@
 # Hype Billboard
 
+> [!NOTE]
+> ¿Prefieres leer esto en español? [Ver README en español](README.es.md)
+
 > A tech video billboard that cuts through the noise. The backend acts as a smart filter on raw YouTube data — calculating a **Hype Level** for each video and surfacing the **Crown Jewel** (highest hype) in the UI.
 
 ![Hype Billboard preview](.github/preview.png)
